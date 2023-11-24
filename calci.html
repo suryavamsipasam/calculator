@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Calculator</title>
+		<style>
+			td{
+				background:green;
+			  }
+			button{
+				background:orange;
+			  }
+		</style>
+		<script>
+			function display(v)
+			{
+				val=document.getElementById("inp").value;
+				val=val+v;
+				document.getElementById("inp").value=val;
+			}
+			function clr() {
+            document.getElementById("inp").value = ""
+        }
+			function operation()
+			{
+				val=document.getElementById("inp").value;
+				res=eval(val)
+				document.getElementById("inp").value=res;
+			}
+		</script>
+	</head>
+	<body>
+	<center>
+		<table border="2px" width="200px" height="200px">
+				<td colspan="3"><input type="text" id="inp" style="text-align:right"></td>
+				<td><input style="background:orange" type="button" value="c" onclick="clr()" /> </td>
+			</tr>
+			<tr style="text-align:center">
+				<td><button type="text" onclick="display('7')">7</button></td>
+				<td><button type="text" onclick="display('8')">8</button></td>
+				<td><button type="text" onclick="display('9')">9</button></td>
+				<td><button type="text" onclick="display('*')">*</button></td>
+			</tr>
+			<tr style="text-align:center">
+				<td><button type="text" onclick="display('4')">4</button></td>
+				<td><button type="text" onclick="display('5')">5</button></td>
+				<td><button type="text" onclick="display('6')">6</button></td>
+				<td><button type="text" onclick="display('-')">-</button></td>
+			</tr>
+			<tr style="text-align:center">
+				<td><button type="text" onclick="display('1')">1</button></td>
+				<td><button type="text" onclick="display('2')">2</button></td>
+				<td><button type="text" onclick="display('3')">3</button></td>
+				<td><button type="text" onclick="display('+')">+</button></td>
+			</tr>
+			<tr style="text-align:center">
+				<td><button type="text" onclick="display('0')">0</button></td>
+				<td><button type="text" onclick="display('.')">.</button></td>
+				<td><button type="text" onclick="operation()">=</button></td>
+				<td><button type="text"  onclick="display('/')">/</button></td>
+			</tr>
+		</table>
+	</center>
+	</body>
+</html>
